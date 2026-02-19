@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.gp.rutracker"
+       name="RuTracker"
+       version="0.0.19"
+       provider-name="gp@">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+    <import addon="script.module.pysocks" optional="true"/>
+    <import addon="script.module.requests" version="2.2"/>
+    <import addon="plugin.video.tam" version="2.7.4"/>
+    <import addon="service.locale" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="imgproxy.py" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <news>
+       v0.0.19
+       Поправлен парсер названий раздач. Больше не принимаем 'Сезон охоты' за сериал.
+       Вывод сообщения о проблемной настройке.
+       При выводе на экран отсутсвующий год заменяется на 4 пробела
+       Если в include раздела только 1 форум, то сразу открываем его.
+       Удалены настроки kp_country и kp_city.
+    </news>
+    <summary>rutracker.org browser</summary>
+    <description>rutracker.org browser</description>
+    <platform>all</platform>
+    <license>BSD-3-Clause</license>
+    <forum>https://kodi.moy.su/forum/2-81-1</forum>
+    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <assets>
+      <icon>resources/media/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
 <addon id="repository.gp.pub" name="gp@ Addons Repo" version="1.0.0" provider-name="gp@">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
