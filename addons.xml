@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.gp.rutracker"
        name="RuTracker"
-       version="0.0.19"
+       version="0.0.20"
        provider-name="gp@">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -17,12 +17,13 @@
   <extension point="xbmc.service" library="imgproxy.py" start="login" />
   <extension point="xbmc.addon.metadata">
     <news>
-       v0.0.19
-       Поправлен парсер названий раздач. Больше не принимаем 'Сезон охоты' за сериал.
-       Вывод сообщения о проблемной настройке.
-       При выводе на экран отсутсвующий год заменяется на 4 пробела
-       Если в include раздела только 1 форум, то сразу открываем его.
-       Удалены настроки kp_country и kp_city.
+       v0.0.20
+       Title(): жанр в нижнем регистре, разрешен спиcок жанров.
+       Title(): разрешен список стран
+       Title(): проверка кандидата в страны по Scraper.COUNTRIES
+       Title() рефакторинг
+       Удалена поддержка python 2.x, удален не используемый плагином код, pylint
+       Скрапер первого поста раздачи вынесен в отдельный класс.
     </news>
     <summary>rutracker.org browser</summary>
     <description>rutracker.org browser</description>
