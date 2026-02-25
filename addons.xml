@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.gp.rutracker"
        name="RuTracker"
-       version="0.0.21"
+       version="0.0.22"
        provider-name="gp@">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -17,13 +17,10 @@
   <extension point="xbmc.service" library="imgproxy.py" start="login" />
   <extension point="xbmc.addon.metadata">
     <news>
-       v0.0.21
-       imgproxy.py: send_error() может навернуться по SIGPIPE
-       Настройки плагина разбиты на 2 группы
-       Отображение сезона и эпизодов для сериалов
-       Возможность раскраски для форумов, названий, пагинатора, поиска.
-       Настраиваемая раскраска для добавляемых к названию тэгов.
-       Фикс tid 4076836: Title.movie_scrape(): перед обработкой обрезаем строку пока не останется только 1 вхождение ") [".
+       v0.0.22
+       Merge pull request 'Возможность просмотра трейлеров для раздач с известным ID КиноПоиска' (#6) from trailers into main
+       Возможность просмотра трейлеров для раздач с известным ID КиноПоиска
+       Фикс: Title.parse_serial() возвращает True только при успехе. #6818351
     </news>
     <summary>rutracker.org browser</summary>
     <description>rutracker.org browser</description>
