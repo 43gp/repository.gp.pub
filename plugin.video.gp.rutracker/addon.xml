@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.gp.rutracker"
        name="RuTracker"
-       version="0.0.23"
+       version="0.0.24"
        provider-name="gp@">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -16,13 +16,8 @@
   <extension point="xbmc.service" library="imgproxy.py" start="login" />
   <extension point="xbmc.addon.metadata">
     <news>
-       v0.0.23
-       Рефакторинг трейлеров, настраиваемый параметр для автоматического выбора качества трейлеров
-       strip_title(): если ничего не получилось, то показываем как есть
-       Первое название раздачи всегда считаем русским.
-       В список стран добавлен SU:СССР
-       При выводе сообщения об ошибке не пишем букву модуля.
-       попроситься в search.db
+       v0.0.24
+       Фикс ошибки индексации файлов в торрентах.
     </news>
     <summary>rutracker.org browser</summary>
     <description>rutracker.org browser</description>
